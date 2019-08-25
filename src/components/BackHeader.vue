@@ -1,6 +1,6 @@
 <template>
   <Header :class="headerClass">
-    <back-btn></back-btn>
+    <backbtn></backbtn>
     <span v-if="title" class="back-header-title">{{title}}</span>
     <input
       v-if="input"
@@ -24,10 +24,7 @@
 </template>
 
 <script>
-// import BackBtn from './BackBtn.vue';
-// 可能并没有将input封装进来的必要
-// import { getSearchSuggestions } from '../api/BackHeader';
-
+import BackBtn from './BackBtn.vue';
 export default {
   data() {
     return {
