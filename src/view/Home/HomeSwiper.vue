@@ -21,17 +21,17 @@ export default {
     data(){
         return{
             swiperOption: {
-            autoplay: {
-            disableOnInteraction: false // 用户操作swiper后，不停止自动播放
+              autoplay: {
+              disableOnInteraction: false // 用户操作swiper后，不停止自动播放
+              },
+              loop: true,
+              pagination: {
+              el: ".swiper-pagination"
+              },
+              lazy: {
+              loadPrevNext: true // 同时预加载前一个和后一个元素
+              }
             },
-            loop: true,
-            pagination: {
-            el: ".swiper-pagination"
-            },
-            lazy: {
-            loadPrevNext: true // 同时预加载前一个和后一个元素
-            }
-         },
             //三张轮播，使用变量循环
             swiperList:[
                 {
@@ -53,17 +53,15 @@ export default {
 }
 </script>
 <style lang="less" scoped>
- 
 .swiper {
-   margin-top: 1rem;
   .swiper-slide {  
     .img-wrap {
       margin: 0 auto; // 实现轮播图水平居中
-      width: 96%;
+      width: 100%;
       height: 6.2rem;
       .banner-img {
         width: 100%;
-        border-radius: 0.5rem;
+        border-radius: 1rem 1rem;
       }
     }
    

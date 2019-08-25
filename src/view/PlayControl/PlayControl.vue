@@ -167,6 +167,14 @@ export default {
             console.log("watch created likelist:")
             newVal ? this.toggleToPlaying():this.toggleToStopPlaying()
         },
+        // curtime(newVal,oldVal){
+        //   if(newVal===this.$refs.audio.duration){
+        //     //如果播放完成，自动循环，继续播放
+        //     // this.$refs.audio.src = 'https://music.163.com/song/media/outer/url?id='+this.musid+'.mp3';
+        //     this.getIsPlaying(true);  
+        //   }
+
+        // }
     },
     filters:{
          //格式化事件的函数

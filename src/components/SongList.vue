@@ -71,9 +71,8 @@ export default {
             }
             .trackdesc{
                 margin: 0;
-                margin-top: 0.18rem;
                 font-size: 0.8rem;
-                margin-left:-1.6rem;
+                transform-origin: 0 0;
                 transform: scale(0.8);
                 color: #757575;
             }

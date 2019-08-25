@@ -12,16 +12,11 @@
      <nav id="menu">
         <side-bar-menu :children="this.$children"></side-bar-menu>
       </nav>
-      <main id="panel" ref="panel">
-        <header>
-        <button class="toggle-button logout-btn">
-           <i class="iconfont icon-xiangmuxiangqing"></i>
-        </button>   
+      <main id="panel" ref="panel"> 
         <!-- 显示路由跳转 -->
         <keep-alive>
           <router-view></router-view>
-        </keep-alive>
-       </header>
+        </keep-alive> 
       </main>
     </Slideout>
   </div>

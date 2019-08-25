@@ -1,10 +1,30 @@
 <template>
   <div class="home">
-    <div class="redWall"></div>
-    <HomeSwiper/>
-    <FourCircles/>
-    <!-- 不要嘲笑这个组件名 -->
-    <RecommendSongList/>
+    <div class="home-header-container">
+        <button class="toggle-button">
+           <i class="iconfont icon-xiangmuxiangqing"></i>
+        </button>
+        <!-- <router-link> -->
+        <button class="toggle-button">
+           <span>我的</span>
+        </button>
+        <!-- </router-link> -->
+        <!-- <router-link > -->
+        <button :class="isActive?'active':''">
+           <span>发现</span>
+        </button>
+        <!-- </router-link> -->
+        <!-- <router-link > -->
+        <button class="toggle-button">
+            <i class="iconfont icon-sousuo"></i>
+        </button>
+        <!-- </router-link>   -->
+    </div>
+    <div class="home-content-container">
+      <HomeSwiper/>
+      <FourCircles/>
+      <RecommendSongList/>   
+    </div>
   </div>
 </template>
 
@@ -19,17 +39,33 @@ export default {
     FourCircles,
     RecommendSongList,
   },
+  data(){
+    return{
+      isActive:true
+    }
+  }
 };
 </script>
 
 <style lang="less" scoped>
-.redWall {
-  position: absolute;
-  z-index: -1; // 使红墙显示在最底层
-  left: 0;
-  top: 0;
+@bgcolor:#d44439;
+.home-header-container {
   width: 100%;
-  height: 1.5rem;
-  background-color: #d44439;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #fff;
+  display: flex;
+  justify-content:space-between;//间隔分布
+}
+.home-header-container /deep/ .iconfont{
+  color:#333;
+}
+.active{
+  font-weight:bold;
+  color: @bgcolor;
+  font-size: 1rem;
+}
+.sousuo-btn{
+
 }
 </style>

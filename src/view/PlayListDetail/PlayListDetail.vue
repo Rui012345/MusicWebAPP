@@ -122,8 +122,8 @@ export default {
 
       }
       .top-container{
-          height:6rem;
-          padding: 2rem 1rem;
+          height:35vw;
+          padding: 1rem 1rem;
           display: flex;
           flex-flow:row;/*伸缩项目单行排列*/  
           .img-wrap{

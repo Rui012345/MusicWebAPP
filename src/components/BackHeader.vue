@@ -1,5 +1,5 @@
 <template>
-  <Header :class="headerClass">
+  <header :class="headerClass">
     <backbtn></backbtn>
     <span v-if="title" class="back-header-title">{{title}}</span>
     <input
@@ -20,7 +20,7 @@
         </li>
       </ul>
     </div>
-  </Header>
+  </header>
 </template>
 
 <script>
