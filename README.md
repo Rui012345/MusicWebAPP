@@ -1,7 +1,5 @@
 # MusicWebAPP
-musicApp based MusicNet NodeJS API  
-
-
+musicApp based [MusicNet NodeJS API ](https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi) 
 &nbsp;
 ## 1. Download and execute：
 &nbsp;
