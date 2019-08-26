@@ -69,7 +69,9 @@ export default {
         const res = await login(this.tel,this.password);
         localStorage.setItem("uid",res.account.id);//将用户id存储在uid。
         await this.getTheSetLoginStatus();//更新vuex里的登录状态
-        this.$router.replace('/my');
+        //$router为路由实例，$route为当前页面的路由对象
+        console.log("woshi1redirect",this.$route.query.redirect);
+        this.$router.push(this.$route.query.redirect)// 将my修改为嵌套路由，需要修改this.$router.replace('/my');
         console.log("登陆成功，欢迎",res.account.id);
       }catch(error){
         console.dir(error,"failed");

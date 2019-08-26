@@ -8,6 +8,7 @@ export default{
     try {
       await loginRegisterApi.getLoginStatus()/* 等待api中的get请求,获取登录状态 */
       commit(Types.UPDATE_LOGIN_STATUS, true)
+      console.log('修改login状态成功')
     } catch (e) {
       if (e.code === 301) { /* 永久重定向 */
         commit(Types.UPDATE_LOGIN_STATUS, false)

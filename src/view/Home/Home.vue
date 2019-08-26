@@ -4,16 +4,8 @@
         <button class="toggle-button">
            <i class="iconfont icon-xiangmuxiangqing"></i>
         </button>
-        <!-- <router-link> -->
-        <button class="toggle-button">
-           <span>我的</span>
-        </button>
-        <!-- </router-link> -->
-        <!-- <router-link > -->
-        <button :class="isActive?'active':''">
-           <span>发现</span>
-        </button>
-        <!-- </router-link> -->
+        <router-link to="/home/my">我的</router-link>
+        <router-link to="/home/find">发现</router-link>
         <!-- <router-link > -->
         <button class="toggle-button">
             <i class="iconfont icon-sousuo"></i>
@@ -21,27 +13,16 @@
         <!-- </router-link>   -->
     </div>
     <div class="home-content-container">
-      <HomeSwiper/>
-      <FourCircles/>
-      <RecommendSongList/>   
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import HomeSwiper from './HomeSwiper.vue';
-import FourCircles from './FourCircles.vue';
-import RecommendSongList from './RecommendSongList.vue';
-
 export default {
-  components: {
-    HomeSwiper,
-    FourCircles,
-    RecommendSongList,
-  },
   data(){
     return{
-      isActive:true
+      
     }
   }
 };
@@ -54,15 +35,15 @@ export default {
   height: 3rem;
   line-height: 3rem;
   background-color: #fff;
-  display: flex;
+  display: inline-flex;
   justify-content:space-between;//间隔分布
 }
 .home-header-container /deep/ .iconfont{
   color:#333;
 }
-.active{
+.router-link-active{
   font-weight:bold;
-  color: @bgcolor;
+  color:#d44439;
   font-size: 1rem;
 }
 .sousuo-btn{
