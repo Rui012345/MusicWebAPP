@@ -5,8 +5,10 @@ musicApp based [MusicNet NodeJS API ](https://binaryify.github.io/NeteaseCloudMu
 &nbsp;
 *  ```npm install ```
 *  ```npm run dev```
+## 2. 移动端适配：
+*  ```淘宝flexbile ``` 
 
-## 2. /src/ tree：
+## 3. /src/ tree：
 ```
 |-- src
     |-- App.vue
